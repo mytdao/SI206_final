@@ -1,0 +1,99 @@
+The income disparity for the city of Birmingham is -17299 when compared to the state average of 53913
+The income disparity for the city of Mobile is -10127 when compared to the state average of 53913
+The income disparity for the city of Anchorage is 8809 when compared to the state average of 77845
+The income disparity for the city of Phoenix is -621 when compared to the state average of 69056
+The income disparity for the city of Tucson is -18750 when compared to the state average of 69056
+The income disparity for the city of Mesa is 210 when compared to the state average of 69056
+The income disparity for the city of Chandler is 25557 when compared to the state average of 69056
+The income disparity for the city of Scottsdale is 30041 when compared to the state average of 69056
+The income disparity for the city of Los Angeles is -14535 when compared to the state average of 84907
+The income disparity for the city of San Diego is 8135 when compared to the state average of 84907
+The income disparity for the city of San Jose is 41470 when compared to the state average of 84907
+The income disparity for the city of San Francisco is 36919 when compared to the state average of 84907
+The income disparity for the city of Fresno is -23657 when compared to the state average of 84907
+The income disparity for the city of Sacramento is -9596 when compared to the state average of 84907
+The income disparity for the city of Long Beach is -11002 when compared to the state average of 84907
+The income disparity for the city of Oakland is -2671 when compared to the state average of 84907
+The income disparity for the city of Santa Ana is -4642 when compared to the state average of 84907
+The income disparity for the city of Anaheim is -3160 when compared to the state average of 84907
+The income disparity for the city of Riverside is -8349 when compared to the state average of 84907
+The income disparity for the city of Stockton is -15063 when compared to the state average of 84907
+The income disparity for the city of Fremont is 71061 when compared to the state average of 84907
+The income disparity for the city of Irvine is 20867 when compared to the state average of 84907
+The income disparity for the city of San Bernardino is -19596 when compared to the state average of 84907
+The income disparity for the city of Modesto is -14438 when compared to the state average of 84907
+The income disparity for the city of Denver is -624 when compared to the state average of 82254
+The income disparity for the city of Colorado Springs is -7675 when compared to the state average of 82254
+The income disparity for the city of Aurora is -10607 when compared to the state average of 82254
+The income disparity for the city of Jacksonville is -4441 when compared to the state average of 63062
+The income disparity for the city of Miami is -14273 when compared to the state average of 63062
+The income disparity for the city of Tampa is 342 when compared to the state average of 63062
+The income disparity for the city of Hialeah is -16388 when compared to the state average of 63062
+The income disparity for the city of Atlanta is 7548 when compared to the state average of 66559
+The income disparity for the city of Augusta is -18638 when compared to the state average of 66559
+The income disparity for the city of Boise is 3743 when compared to the state average of 66474
+The income disparity for the city of Chicago is -5629 when compared to the state average of 72205
+The income disparity for the city of Indianapolis is -4264 when compared to the state average of 62743
+The income disparity for the city of Fort Wayne is -8006 when compared to the state average of 62743
+The income disparity for the city of Des Moines is -4907 when compared to the state average of 65600
+The income disparity for the city of Wichita is -7831 when compared to the state average of 64124
+The income disparity for the city of Louisville is 1609 when compared to the state average of 55573
+The income disparity for the city of Lexington is 5369 when compared to the state average of 55573
+The income disparity for the city of New Orleans is -5145 when compared to the state average of 52087
+The income disparity for the city of Shreveport is -10053 when compared to the state average of 52087
+The income disparity for the city of Baltimore is -35551 when compared to the state average of 90203
+The income disparity for the city of Boston is -10362 when compared to the state average of 89645
+The income disparity for the city of Detroit is -27358 when compared to the state average of 63498
+The income disparity for the city of Ann Arbor is 5366 when compared to the state average of 63498
+The income disparity for the city of Grand Rapids is -3902 when compared to the state average of 63498
+The income disparity for the city of Minneapolis is -8323 when compared to the state average of 77720
+The income disparity for the city of Saint Paul is -11622 when compared to the state average of 77720
+The income disparity for the city of Kansas City is 1549 when compared to the state average of 61847
+The income disparity for the city of St. Louis is -11882 when compared to the state average of 61847
+The income disparity for the city of Omaha is -3869 when compared to the state average of 66817
+The income disparity for the city of Lincoln is -4523 when compared to the state average of 66817
+The income disparity for the city of Las Vegas is -6528 when compared to the state average of 66274
+The income disparity for the city of Henderson is 11650 when compared to the state average of 66274
+The income disparity for the city of Reno is 1204 when compared to the state average of 66274
+The income disparity for the city of Newark is -46054 when compared to the state average of 89296
+The income disparity for the city of Jersey City is -7338 when compared to the state average of 89296
+The income disparity for the city of Albuquerque is 4520 when compared to the state average of 53992
+The income disparity for the city of New York City is -6317 when compared to the state average of 74314
+The income disparity for the city of Buffalo is -33645 when compared to the state average of 74314
+The income disparity for the city of Rochester is -32334 when compared to the state average of 74314
+The income disparity for the city of Albany is -24551 when compared to the state average of 74314
+The income disparity for the city of Charlotte is 8897 when compared to the state average of 61972
+The income disparity for the city of Raleigh is 12640 when compared to the state average of 61972
+The income disparity for the city of Greensboro is -10147 when compared to the state average of 61972
+The income disparity for the city of Winston-Salem is -7744 when compared to the state average of 61972
+The income disparity for the city of Columbus is -4060 when compared to the state average of 62262
+The income disparity for the city of Cincinnati is -19529 when compared to the state average of 62262
+The income disparity for the city of Toledo is -18112 when compared to the state average of 62262
+The income disparity for the city of Oklahoma City is 3388 when compared to the state average of 55826
+The income disparity for the city of Tulsa is -4818 when compared to the state average of 55826
+The income disparity for the city of Portland is 7495 when compared to the state average of 71562
+The income disparity for the city of Philadelphia is -16058 when compared to the state average of 68957
+The income disparity for the city of Pittsburgh is -11136 when compared to the state average of 68957
+The income disparity for the city of Columbia is -11794 when compared to the state average of 59318
+The income disparity for the city of Nashville is 5162 when compared to the state average of 59695
+The income disparity for the city of Memphis is -15378 when compared to the state average of 59695
+The income disparity for the city of Houston is -11464 when compared to the state average of 66963
+The income disparity for the city of San Antonio is -12040 when compared to the state average of 66963
+The income disparity for the city of Dallas is -8968 when compared to the state average of 66963
+The income disparity for the city of Austin is 12579 when compared to the state average of 66963
+The income disparity for the city of Fort Worth is 1272 when compared to the state average of 66963
+The income disparity for the city of El Paso is -15722 when compared to the state average of 66963
+The income disparity for the city of Corpus Christi is -7151 when compared to the state average of 66963
+The income disparity for the city of Lubbock is -12216 when compared to the state average of 66963
+The income disparity for the city of Laredo is -14525 when compared to the state average of 66963
+The income disparity for the city of Frisco is 63155 when compared to the state average of 66963
+The income disparity for the city of Garland is -5356 when compared to the state average of 66963
+The income disparity for the city of Virginia Beach is 671 when compared to the state average of 80963
+The income disparity for the city of Alexandria is 20199 when compared to the state average of 80963
+The income disparity for the city of Norfolk is -22372 when compared to the state average of 80963
+The income disparity for the city of Seattle is 26534 when compared to the state average of 84247
+The income disparity for the city of Spokane is -25533 when compared to the state average of 84247
+The income disparity for the city of Everett is -14224 when compared to the state average of 84247
+The income disparity for the city of Tacoma is -7106 when compared to the state average of 84247
+There are 100 cities with p2 as their main pollutant
+The average air quality for cities with p2 as their main pollutant is 30.41
