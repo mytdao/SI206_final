@@ -59,14 +59,14 @@ def calculate_disparity(cur, f):
         data = cur.fetchall()
 
         if len(data) > 0:
-            print(data)
+            #print(data)
 
             for row in data:
                 temp_dict = {"city_name": row[0], "state_name": row[1], "city_median_income": row[2], "state_median_income": row[3], "income_disparity": row[2] - row[3]}
                 income_disparity.append(temp_dict)
                 f.write(f"The income disparity for the city of {temp_dict['city_name']} is {temp_dict['income_disparity']} when compared to the state average of {temp_dict['state_median_income']}\n")
     
-    print(income_disparity)
+    #print(income_disparity)
     return income_disparity
 
 
@@ -146,8 +146,8 @@ def visualize_data(income_disparity, pollution_factors, aqi_scores, city_aqi_sco
     pollution_values.extend(list(pollution_factors.values()))
     pollution_values.extend([0, 0])
 
-    print(labels)
-    print(pollution_values)
+    #print(labels)
+    #print(pollution_values)
     plt.bar(labels, pollution_values)
     plt.xlabel('Types of Major Pollutants')
     plt.ylabel('Number of Cities')
@@ -179,9 +179,9 @@ def visualize_data(income_disparity, pollution_factors, aqi_scores, city_aqi_sco
         city_labels.append(row['city_name'])
         y.append(city_aqi_scores[row['city_name']])
 
-    print("\n\n\n")
-    print(x)
-    print(y)
+    #print("\n\n\n")
+    #print(x)
+    #print(y)
 
     fig, ax = plt.subplots()
     ax.scatter(x, y)

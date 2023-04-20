@@ -141,13 +141,15 @@ def populate_iqair_and_cities_database(cur, conn, iqair_api_key, census_api_key)
     for j in range(i, i+25):
         if j < 100:
             city_data = get_request_iqair('http://api.airvisual.com/v2/city?city='+ cities[j]['city'] +'&state='+ cities[j]['state'] +'&country=USA&key=', iqair_api_key)
+            #to see the progress of the requests 
+            #this api limits the amount of requests per minute
             print(city_data)
             city_data = city_data['data']['current']['pollution']
             
             
             table_data = (cities[j]['city'], cities[j]['state'], city_data['aqius'], city_data['mainus'], int(cities[j]['placefp']), int(cities[j]['statefp']))
             cur.execute("INSERT INTO iqair (name, state, aqius, mainus, placefp, statefp) VALUES (?, ?, ?, ?, ?, ?)", table_data)
-            time.sleep(12)
+            time.sleep(13)
 
 
             mhi_city_data = get_request_MHI_city_census(cities[j]['placefp'], cities[j]['statefp'], census_api_key)
@@ -235,7 +237,7 @@ def populate_states_database(cur, conn, census_api_key):
     i = cur.fetchone()[0]
 
     for j in range(i, i+25):
-        if j < 50:
+        if j < 51:
             mhi_state_data = get_request_MHI_state_census(list(states[j].values())[0], census_api_key)
             mhi_state_data = mhi_state_data[1][0]
             

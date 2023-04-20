@@ -63,7 +63,7 @@ def main():
     None
     """
     census_api_key = "d8900686c6c3c3849250269493e9dc13ea71aae8"
-    iqair_api_key = "ec767691-84eb-4021-811e-9753abae9c2c"
+    iqair_api_key = "9cab2eb5-7dd7-48d1-8149-8535841f09b4"
 
     #Find correct syntax for state and city names
     # states = populate_database.get_request_iqair('http://api.airvisual.com/v2/states?country=USA&key=', iqair_api_key)

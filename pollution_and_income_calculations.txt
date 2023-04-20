@@ -25,6 +25,7 @@ The income disparity for the city of Modesto is -14438 when compared to the stat
 The income disparity for the city of Denver is -624 when compared to the state average of 82254
 The income disparity for the city of Colorado Springs is -7675 when compared to the state average of 82254
 The income disparity for the city of Aurora is -10607 when compared to the state average of 82254
+The income disparity for the city of Washington is 0 when compared to the state average of 90088
 The income disparity for the city of Jacksonville is -4441 when compared to the state average of 63062
 The income disparity for the city of Miami is -14273 when compared to the state average of 63062
 The income disparity for the city of Tampa is 342 when compared to the state average of 63062
@@ -97,5 +98,7 @@ The income disparity for the city of Everett is -14224 when compared to the stat
 The income disparity for the city of Tacoma is -7106 when compared to the state average of 84247
 The income disparity for the city of Milwaukee is -20488 when compared to the state average of 67125
 The income disparity for the city of Madison is 145 when compared to the state average of 67125
-There are 100 cities with p2 as their main pollutant
-The average air quality for cities with p2 as their main pollutant is 30.41
+There are 93 cities with p2 as their main pollutant
+The average air quality for cities with p2 as their main pollutant is 34.18279569892473
+There are 7 cities with p1 as their main pollutant
+The average air quality for cities with p1 as their main pollutant is 33.857142857142854
