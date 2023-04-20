@@ -1,3 +1,7 @@
+# Team: My Dao and Dexter Kennedy
+# student ids: MD - 18181740 || DK - 18778856
+# emails: mdao@umich.edu || dexken@umich.edu
+
 import io 
 import os
 import sys
