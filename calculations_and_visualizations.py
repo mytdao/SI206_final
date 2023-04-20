@@ -3,10 +3,12 @@ import os
 import sys
 import sqlite3
 import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
     """
-    Connect to complete database to 
+    Connects to the database and opens a file for writing before calling helper functions that
+    make calculations and visualizations using the database data and write to the file.
 
     Parameters
     ----------
@@ -33,27 +35,25 @@ def main():
     visualize_data(income_disparity, pollution_factors, aqi_scores, city_aqi_scores)
 
 
-"""
 
-Parameters
-----------
-cur: The connection cursor
-f: The file handle
-
-Returns
--------
-Income_disparity: A list of dictionaries with each dictionary having a key for city_name, state_name, city_median_income, state_median_income, and income_disparity
-
-
-Retrieves data from the cities and states table joined on statefp then uses the data to construct the income_disparity
-list of dictionaries while printing out each cities data.
-
-"""
 
 def calculate_disparity(cur, f):
+    """
+    Parameters
+    ----------
+    cur: The connection cursor
+    f: The file handle
+
+    Returns
+    -------
+    Income_disparity: A list of dictionaries with each dictionary having a key for city_name, state_name, city_median_income, state_median_income, and income_disparity
+
+    Retrieves data from the cities and states table joined on statefp then uses the data to construct the income_disparity
+    list of dictionaries while printing out each cities data.
+    """
     income_disparity = []
 
-    for state_code in range(55):
+    for state_code in range(57):
 
         cur.execute("SELECT cities.name, states.name, cities.median_household_income, states.median_household_income FROM cities JOIN states ON cities.statefp = states.statefp AND states.statefp = ?", (state_code, ))
         data = cur.fetchall()
@@ -70,23 +70,24 @@ def calculate_disparity(cur, f):
     return income_disparity
 
 
-"""
-Parameters
-----------
-cur: The connection cursor
-f: The file handle
 
-Returns
--------
-pollution_factors: A dictionary of the total main pollutants in the cities
-aqi_scores:The sum of all aqi scores for cities with each major pollutant 
-city_aqi_scores: A dictionary of aqi scores for each city
-
-Reads data from the iqair table and parses through the data to construct the output dictionaries.
-While it constructs the dictionaries it outputs the calculated data to the inputted file handle
-"""
 
 def calculate_pollution_factors(cur, f):
+    """
+    Parameters
+    ----------
+    cur: The connection cursor
+    f: The file handle
+
+    Returns
+    -------
+    pollution_factors: A dictionary of the total main pollutants in the cities
+    aqi_scores:The sum of all aqi scores for cities with each major pollutant 
+    city_aqi_scores: A dictionary of aqi scores for each city
+
+    Reads data from the iqair table and parses through the data to construct the output dictionaries.
+    While it constructs the dictionaries it outputs the calculated data to the inputted file handle
+    """
 
     pollution_factors = {}
     aqi_scores = {}
@@ -117,52 +118,56 @@ def calculate_pollution_factors(cur, f):
 
     return pollution_factors, aqi_scores, city_aqi_scores
 
-"""
-Parameters
-----------
-Income_disparity: A list of dictionaries with each dictionary having a key for city_name, state_name, city_median_income, state_median_income, and income_disparity
-pollution_factors: A dictionary of the total main pollutants in the cities
-aqi_scores:The sum of all aqi scores for cities with each major pollutant 
-city_aqi_scores: A dictionary of aqi scores for each city
-
-Returns
--------
-None
 
 
-Uses the passed in data to create three visualizations.
-One being a barchart of which pollutants are the main polluters or cities.
-The second being the average AQI score for cities with each main pollutant.
-The third being a scatterplot of AQI scores and income disparity.
-"""            
-def visualize_data(income_disparity, pollution_factors, aqi_scores, city_aqi_scores):
-    
-    # Create a bar chart for the number of cities with each major pollutant
-    labels = list(pollution_factors.keys())
-    values = list(pollution_factors.values())
+def visualize_data(income_disparity, pollution_factors, aqi_scores, city_aqi_scores):    
+    """
+    Parameters
+    ----------
+    Income_disparity: A list of dictionaries with each dictionary having a key for city_name, state_name, city_median_income, state_median_income, and income_disparity
+    pollution_factors: A dictionary of the total main pollutants in the cities
+    aqi_scores:The sum of all aqi scores for cities with each major pollutant 
+    city_aqi_scores: A dictionary of aqi scores for each city
 
-    print("\n\n\n")
+    Returns
+    -------
+    None
+
+    Uses the passed in data to create three visualizations.
+    One being a barchart of which pollutants are the main polluters or cities.
+    The second being the average AQI score for cities with each main pollutant.
+    The third being a scatterplot of AQI scores and income disparity.
+    """   
+    #Number of Cities with Each Major Pollutant
+    labels = ["CO", "NO2", "SO2"]
+    labels.extend(list(pollution_factors.keys()))
+    labels.extend(["p10", "O3"])
+    pollution_values = [0, 0, 0]
+    pollution_values.extend(list(pollution_factors.values()))
+    pollution_values.extend([0, 0])
 
     print(labels)
-    print(values)
-
-
-    colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple']
-    plt.bar(labels, values, color=colors[0:len(labels)])
+    print(pollution_values)
+    plt.bar(labels, pollution_values)
     plt.xlabel('Types of Major Pollutants')
     plt.ylabel('Number of Cities')
     plt.title('Number of Cities with Each Major Pollutant')
     plt.savefig("num_city_pollutants.png")
+    plt.close()
 
-    # Create a bar chart for Average AQI Scores for Cities with Each Major Pollutant
-    labels = list(aqi_scores.keys())
-    values = list(aqi_scores.values())
-    colors = ['purple', 'orange', 'yellow', 'green', 'blue', 'red']
-    plt.bar(labels, values, color=colors[0:len(labels)])
-    plt.xlabel('Types of Major Pollutants')
-    plt.ylabel('Average Air Quality Index Score')
-    plt.title('Average AQI Scores for Cities with Each Major Pollutant')
-    plt.savefig("avg_aqis_for_pollutants.png")
+
+    #Number of Cities within Air Quality Index Score
+    values = list(city_aqi_scores.values())
+    bin_edges = np.arange(0, max(values) + 5, 5)
+    hist, bins = np.histogram(values, bins=bin_edges)
+
+    colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'navy', 'springgreen', 'pink', 'cyan']
+    plt.bar(bins[:-1], hist, width=5, color = colors)
+    plt.xlabel("United States Air Quality Index Score")
+    plt.ylabel("Number of Cities")
+    plt.title('Number of Cities within Air Quality Index Score')
+    plt.savefig("barchart_of_aqi.png")
+    plt.close()
 
     #Air Quality Index Values vs. Income Disparity
     x = []
@@ -182,13 +187,13 @@ def visualize_data(income_disparity, pollution_factors, aqi_scores, city_aqi_sco
     ax.scatter(x, y)
     ax.set_ylim(0, 100)
 
-    for i in range(len(city_labels)):
-        plt.text(x[i], y[i], city_labels[i])
+    # for i in range(len(city_labels)):
+    #     plt.text(x[i], y[i], city_labels[i])
 
     ax.set_xlabel('Income Disparity of Cities Compared to State Average')
     ax.set_ylabel('United States Air Quality Index Values')
     ax.set_title('Air Quality Index Values vs. Income Disparity')
-    plt.savefig("air_quality_vs_income.png")
+    fig.savefig("air_quality_vs_income.png")
 
 
 

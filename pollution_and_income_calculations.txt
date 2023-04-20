@@ -95,5 +95,7 @@ The income disparity for the city of Seattle is 26534 when compared to the state
 The income disparity for the city of Spokane is -25533 when compared to the state average of 84247
 The income disparity for the city of Everett is -14224 when compared to the state average of 84247
 The income disparity for the city of Tacoma is -7106 when compared to the state average of 84247
+The income disparity for the city of Milwaukee is -20488 when compared to the state average of 67125
+The income disparity for the city of Madison is 145 when compared to the state average of 67125
 There are 100 cities with p2 as their main pollutant
 The average air quality for cities with p2 as their main pollutant is 30.41

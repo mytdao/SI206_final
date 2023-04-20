@@ -186,6 +186,7 @@ def populate_states_database(cur, conn, census_api_key):
         {"Colorado": "08"},
         {"Connecticut": "09"},
         {"Delaware": "10"},
+        {"District of Columbia": "11"},
         {"Florida": "12"},
         {"Georgia": "13"},
         {"Hawaii": "15"},
